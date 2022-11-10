@@ -7,7 +7,7 @@ function getBotResponse(input){
 
     if (input == "Marry" || input == "Kiana" || input == "Leslie" || input == "Carry") {
         return `"Morning ${input}, I know a few female friends named ${input} who are very friendly, easy-going and easy to get along with, aren't you? :) "`;
-    } else if (input == "Yes" || input == "Somthing" ) {
+    } else if (input == "Yes" || input == "Somtime" ) {
         return "Haha, I guess you like desserts, right?";
     } else if (input == "Yes I like desserts" || input == "Yes I am" || input == "Yes, I like desserts") {
         //第二層
@@ -26,8 +26,8 @@ function getBotResponse(input){
        
                //bugs
           
-    }  else if (input == "I live in Kwun Tong Too" ) {
-         let live = "Kwun Tong";
+    }  else if (input.includes('live') ) {       //input == "I live in Kwun Tong Too"
+         let live =  input.substr(10);   // I live in 
          console.log(live);
 
         return `"I will pass by ${live} after work on Thursdays and Fridays. I know there is a ${favoritefood} dessert shop. When are you free ?Thursdays Or Fridays?"`;
@@ -35,19 +35,27 @@ function getBotResponse(input){
         return "Great, see you on Thursdays night";
     } else if (input == "Fridays" ) {
         return "Great, see you on Fridays night";
-    }else {
+    }     else if (input == "rock") {  
+        return "paper";
+        } else if (input == "paper") {
+             return "scissors";
+         } else if (input == "scissors") {
+            return "rock";
+         } if (input == "hello") {
+            return "Hello there!";
+        } else if (input == "goodbye") {
+            return "Talk to you later!";
+        }
+    
+    
+    
+    else {
         return "Try asking something else!";
     }
 
 
 
-    if (input == "rock") {  
-   return "paper";
-   } else if (input == "paper") {
-        return "scissors";
-    } else if (input == "scissors") {
-       return "rock";
-    }
+  
 
     // Simple responses
     if (input == "hello") {

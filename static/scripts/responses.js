@@ -9,9 +9,9 @@ function getBotResponse(input){
         return `"Morning ${input}, I know a few female friends named ${input} who are very friendly, easy-going and easy to get along with, aren't you? :) "`;
     } else if (input == "Yes" || input == "Somthing" ) {
         return "Haha, I guess you like desserts, right?";
-    } else if (input == "Yes I like desserts") {
+    } else if (input == "Yes I like desserts" || input == "Yes I am" || input == "Yes, I like desserts") {
         //第二層
-          if(input == "Yes, I like desserts" || input == "Yes I am"){
+          if(input == "Yes I like desserts" || input == "Yes I am" || input == "Yes, I like desserts"){
            let favoritefood =  "desserts";
            
             return "oic, I love desserts too! I live in Kwun Tong ,and you??"; 
